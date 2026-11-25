@@ -29,7 +29,7 @@ Tuning the MLP's size or learning rate made no difference. It forgets about the 
 
 | model | weights | XOR solved |
 |---|---|---|
-| **STO tree, growth off** | **4** | **99 / 100** |
+| **STO tree, growth off** | **4** | **98 / 100** |
 | STO tree, growth on | ~8 (median) | 100 / 100 |
 | MLP, 2 hidden, best learning rate | 9 | 79 / 100 |
 | MLP, 4 hidden, best learning rate | 17 | 99 / 100 |
