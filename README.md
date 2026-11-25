@@ -21,7 +21,7 @@ Measured over **10 random task pairs × 5 seeds each**, against a 2-layer MLP tr
 
 | baseline (MLP) | median: tree forgets less by | worst pair |
 |---|---|---|
-| 2 or 4 hidden units, learning rate 0.1 | **≈ 6.4×** | ≈ 1.1× |
+| 2 or 4 hidden units, learning rate 0.1 | **≈ 5.7×** | ≈ 0.74× |
 
 Tuning the MLP's size or learning rate made no difference. It forgets about the same at every setting.
 
@@ -74,11 +74,11 @@ Each branch keeps a small local record: `entry`, `exit`, `gain` (how much it cha
 | bump parents + centered gain | XOR: 0 → ~100 / 100 |
 | homeostasis (wake all branches together) | removed dead-neuron failures |
 | growth (sprouting) | memory ratio 2.8× → ~10× on the first test pair |
-| polarity + critical period | median memory ratio over random pairs 4.6× → 6.4× |
+| polarity + critical period | median memory ratio over random pairs 4.6× → 5.7× |
 
 ## Known limitations
 
-- **Polarity is a guess.** During task A the neuron can't know which sign task B will need. When both tasks have targets of the same sign, the guess can be wrong (worst case still ≈ 1.1× better than the MLP). Biology solves this with pairs of excitatory and inhibitory neurons, which is the multi-neuron stage.
+- **Polarity is a guess.** During task A the neuron can't know which sign task B will need. When both tasks have targets of the same sign, the guess can be wrong (worst case still ≈ 0.74× better than the MLP). Biology solves this with pairs of excitatory and inhibitory neurons, which is the multi-neuron stage.
 - The memory benchmark uses **one input** and **two tasks**. Larger tests (more inputs, more tasks) are next.
 - Inputs are assigned by index for now. Real positions in 3D are next.
 
