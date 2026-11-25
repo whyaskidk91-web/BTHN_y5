@@ -31,7 +31,7 @@ Tuning the MLP's size or learning rate made no difference. It forgets about the 
 |---|---|---|
 | **STO tree, growth off** | **4** | **99 / 100** |
 | STO tree, growth on | ~8 (median) | 100 / 100 |
-| MLP, 2 hidden, best learning rate | 9 | 72 / 100 |
+| MLP, 2 hidden, best learning rate | 9 | 79 / 100 |
 | MLP, 4 hidden, best learning rate | 17 | 99 / 100 |
 
 A flat single neuron can't solve XOR at all (0/100). The branched neuron matches a 17-weight backprop network with 4 weights.
@@ -75,14 +75,6 @@ Each branch keeps a small local record: `entry`, `exit`, `gain` (how much it cha
 | homeostasis (wake all branches together) | removed dead-neuron failures |
 | growth (sprouting) | memory ratio 2.8× → ~10× on the first test pair |
 | polarity + critical period | median memory ratio over random pairs 4.6× → 8.3× |
-
-## What did *not* work (tested and dropped)
-
-- **Activity gate** (a branch only learns when it's more active than usual): made forgetting worse.
-- **Stiffness / consolidation** (branches resist change after use or after sprouting): made learning B much worse and didn't protect A.
-- **Doubling branches on the same input:** the twin branches learn the same thing, so they forget together.
-- **Weight snapping or fixed signs per branch:** worse on inverted tasks.
-- **A single learned axon weight:** a global knob shared by all inputs works like a second bias and becomes a path for forgetting.
 
 ## Known limitations
 
