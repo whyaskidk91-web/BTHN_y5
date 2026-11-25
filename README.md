@@ -21,7 +21,7 @@ Measured over **10 random task pairs × 5 seeds each**, against a 2-layer MLP tr
 
 | baseline (MLP) | median: tree forgets less by | worst pair |
 |---|---|---|
-| 2 or 4 hidden units, learning rate 0.03–0.3 | **≈ 6.4×** | ≈ 1.1× |
+| 2 or 4 hidden units, learning rate 0.1 | **≈ 6.4×** | ≈ 1.1× |
 
 Tuning the MLP's size or learning rate made no difference. It forgets about the same at every setting.
 
