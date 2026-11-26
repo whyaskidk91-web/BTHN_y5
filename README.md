@@ -10,6 +10,12 @@ The goal of the project is **memory**: a neuron that can learn a new task withou
 
 ---
 
+**IMPORTANT**
+
+Current research suggests that the STO takes mostly advantage of the given benchmark,
+
+if memory and how memory actually improves remains to be tested, future results will be shared.
+
 ## Headline results
 
 **1. Less forgetting than a backprop network**
